@@ -1,2 +1,1 @@
-# sovzond sources
-# add
+# GIS image processing with Python, OpenCV, C++, GDAL
