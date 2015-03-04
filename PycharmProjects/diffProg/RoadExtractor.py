@@ -43,7 +43,7 @@ img = cv2.imread(fileName)
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 edges = cv2.Canny(gray,30,30,apertureSize = 3)
 contours, hierarchy = cv2.findContours(edges.copy(),cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-j = 100000
+
 print (len(contours))
 for i in contours:
    L = []
@@ -58,10 +58,12 @@ for i in contours:
       X = squareform(pdist(P))
       edge_list = minimum_spanning_tree(X)
       #print (edge_list)
+      #print (P)
       for edge in edge_list:
         i, j = edge
-        #print (i,j)
-        cv2.line(img,(P[i][0], P[j][0]),(P[i][1], P[j][1]),(0,255,0),2)
+       # print (i,j)
+      #  print ((P[i][0], P[j][0]),(P[i][1], P[j][1]))
+        cv2.line(img,(P[i][0], P[i][1]),(P[j][0], P[j][1]),(0,255,0),2)
 cv2.imwrite('out2' + fileOutPutName,img)
 #cv2.cv.SaveImage('canny'+ fileOutPutName, cv2.cv.fromarray(edges))
 
