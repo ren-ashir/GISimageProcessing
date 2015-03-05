@@ -70,5 +70,5 @@ class TestBuildGraphFromTriMesh(unittest.TestCase):
        print ('TestBuildGraphFromTriMesh')
 #print (dist([3,2],[1,1]))
 #buildGraphFromTriMesh([[1,1],[2,2],[3,3]],[])
-if __name__ == '__main__':
+if __name__ == '__main__': # test only
     unittest.main()
