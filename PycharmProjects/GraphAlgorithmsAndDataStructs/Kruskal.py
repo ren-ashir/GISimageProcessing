@@ -48,13 +48,30 @@ class TestKruskal(unittest.TestCase):
                    [2791,4275],
                    [2792,4274]]
         ds = [dist(self.pt[i], self.pt[(i + 1) % 3]) for i in range(3)]
-        print (ds)
-        self.graph = [[[1,ds[0]],[2,ds[2]]],
+        #print (ds)
+        self.graph1 = [[[1,ds[0]],[2,ds[2]]],
                       [[0,ds[0]],[2,ds[1]]],
                       [[1,ds[1]],[0,ds[2]]]]
+
+        self.graph2 = [[[2,ds[2]]],
+                      [[1,ds[0]],[2,ds[1]]],
+                      [[1,ds[1]],[0,ds[2]]]]
+
+        self.graph3 = [[[2,ds[2]]],
+                      [[2,ds[1]]],
+                      [[1,ds[1]],[0,ds[2]]]]
+
+
         self.MSTgraph = [(0,2),(1,2)]
     def test_1(self):
         pass
-        self.assertEqual(self.MSTgraph,Kruskal(self.graph))
+        self.assertEqual(self.MSTgraph,Kruskal(self.graph1))
+    def test_2(self):
+        pass
+        self.assertEqual(self.MSTgraph,Kruskal(self.graph2))
+    def test_3(self):
+        pass
+        self.assertEqual(self.MSTgraph,Kruskal(self.graph3))
+
 if __name__ == '__main__': # test only
     unittest.main()
