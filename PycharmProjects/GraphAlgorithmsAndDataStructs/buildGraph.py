@@ -25,7 +25,7 @@ def addEdgeToGraph (graph,pt,subtri):
             graph[fromPt].append([toPt,ds])
         if [fromPt,ds] not in graph[toPt]: # O(n)
             graph[toPt].append([fromPt,ds])
-    return graph
+
 class TestAddEdgeToGraph(unittest.TestCase):
     def setUp(self): # Test initialization
         ds = dist([1,1],[2,2])
