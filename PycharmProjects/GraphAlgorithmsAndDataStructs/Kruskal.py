@@ -56,10 +56,5 @@ class TestKruskal(unittest.TestCase):
     def test_1(self):
         pass
         self.assertEqual(self.MSTgraph,Kruskal(self.graph))
-    def test_2(self):
-        pass
-        self.assertEqual(self.MSTgraph,Kruskal(self.graph))
-
-
 if __name__ == '__main__': # test only
     unittest.main()
