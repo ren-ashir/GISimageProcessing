@@ -1,5 +1,5 @@
 __author__ = 'Renat'
-# kruskal's algorithm in Python with DSU data structure optimization
+# Kruskal's algorithm in Python with DSU data structure optimization
 # PAY ATTENTION: It's implementation was not properly tested
 import random
 import unittest
