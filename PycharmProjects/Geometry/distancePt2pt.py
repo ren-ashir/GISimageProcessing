@@ -1,7 +1,7 @@
 __author__ = 'sovznd'
 
 import math
-
+# Y = pdist(X, 'euclidean')  in scipy.spatial.distance.pdist
 def distancePt2pt (a,b):
     x1,y1 = a
     x2,y2 = b
